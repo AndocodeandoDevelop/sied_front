@@ -19,3 +19,11 @@ Route::get('/', function () {
 Route::get('/g', function () {
     return view('welcome');
 });
+
+Route::get('/inicioLaravel', function () {
+    return view('welcome_laravel');
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
