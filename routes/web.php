@@ -24,6 +24,10 @@ Route::get('/inicioLaravel', function () {
     return view('welcome_laravel');
 });
 
+Route::get('/buzon', function () {
+    return view('buzon.buzon');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
